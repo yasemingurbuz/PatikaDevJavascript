@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Css / FontAwesome Links -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <!-- Css / FontAwesome Links End -->
+
+    <title>Kodluyoruz Yapacaklar Listesi</title>
+</head>
+
+<body>
+    <section class="section">
+        <header>
+            <img class="logo"
+                 src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+                 alt="" />
+            <h1 class="title">Yapılacaklar Listesi</h1>
+            <form class="form__container">
+                <input type="text" class="form-input" />
+                <input type="submit" value="Ekle" class="form-submit" />
+            </form>
+        </header>
+        <div class="list__container">
+            <ul class="list"></ul>
+        </div>
+    </section>
+
+    <section class="js-alert visible">
+        <p class="text"></p>
+        <i class="fas fa-times iconTimes"></i>
+    </section>
+
+    <script src="js/todolist.js"></script>
+</body>
+</html>
+

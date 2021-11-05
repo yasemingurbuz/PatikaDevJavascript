@@ -1,0 +1,229 @@
+/*
+=================
+GLOBAL STYLE
+============
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+=================
+HEADER STYLE
+============
+*/
+.section {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding: 5rem;
+    width: 100%;
+    background: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+    background: linear-gradient(to right, #f7b733, #fc4a1a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    margin-bottom: 1rem;
+}
+
+.title {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.form__container {
+    width: 95%;
+    height: 3.5rem;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 2rem;
+    transition: all 0.4s;
+}
+
+    .form__container:hover {
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+.form-input {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 72.5%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.form-submit {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    outline: none;
+    height: 100%;
+    width: 20%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 1.9rem;
+    color: #777;
+}
+
+.form-input:focus + .form-submit {
+    animation: scale linear 1s infinite;
+}
+
+@keyframes scale {
+    0% {
+        text-shadow: none;
+        font-size: 1.6rem;
+        background-color: #fff;
+        color: #f7b733;
+    }
+
+    50% {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        font-size: 1.8rem;
+        background-color: #f7b733;
+        color: #eee;
+    }
+
+    100% {
+        text-shadow: none;
+        font-size: 1.6rem;
+        background-color: #fff;
+        color: #f7b733;
+    }
+}
+
+/* List */
+.list__container {
+    width: 100%;
+}
+
+.list {
+    list-style: none;
+    width: 100%;
+}
+
+.list__item.active {
+    color: white;
+    background: #4568dc;
+    background: -webkit-linear-gradient(to right, #b06ab3, #4568dc);
+    background: linear-gradient(to right, #b06ab3, #4568dc);
+}
+
+    .list__item.active p {
+        text-decoration: line-through;
+    }
+
+    .list__item.active .iconCheck {
+        visibility: visible;
+    }
+
+.iconCheck {
+    visibility: hidden;
+}
+
+.list__item:nth-of-type(even) {
+    background-color: rgba(17, 14, 14, 0.1);
+}
+
+.list__item:nth-of-type(odd) {
+    background-color: rgba(187, 187, 187, 0.1);
+}
+
+.list__item {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+    .list__item:hover {
+        filter: opacity(0.7);
+    }
+
+    .list__item:first-child {
+        margin-top: 0.2rem;
+    }
+
+    .list__item .iconTimes {
+        color: #f7b733;
+    }
+
+    .list__item p {
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+
+/*
+=================
+ALERT STYLE
+============
+*/
+
+.visible {
+    display: none;
+}
+
+.alert {
+    position: absolute;
+    width: 17rem;
+    top: 2rem;
+    right: 2rem;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-danger {
+    background-color: rgba(247, 64, 51, 0.8);
+}
+
+.alert-success {
+    background-color: rgba(106, 247, 51, 0.8);
+}
+
+.iconTimes {
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+    .iconTimes:hover {
+        color: #222;
+    }
+
